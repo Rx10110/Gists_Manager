@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 23, 2016 at 07:08 PM
+-- Generation Time: Mar 23, 2016 at 07:48 PM
 -- Server version: 5.5.47-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.14
 
@@ -23,6 +23,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `categories`
+--
+
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'work', '2016-03-23 16:43:00', '2016-03-23 16:43:00'),
+(2, 'games', '2016-03-23 17:05:08', '2016-03-23 17:05:08');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `gists`
 --
 
@@ -36,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `gists` (
   `username` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=101 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=102 ;
 
 --
 -- Dumping data for table `gists`
@@ -132,7 +154,32 @@ INSERT INTO `gists` (`id`, `description`, `user_id`, `category_id`, `created_at`
 (97, 'osx - ssh to linux - locale', NULL, NULL, '2016-03-23 17:56:44', '2016-03-23 17:56:44', NULL, 'https://gist.githubusercontent.com/moul/4559569/raw/82bbda387d83d72a6040a70149a125620a0175ad/gistfile1.txt'),
 (98, 'anon ssh', NULL, NULL, '2016-03-23 17:56:44', '2016-03-23 17:56:44', NULL, 'https://gist.githubusercontent.com/moul/3142888/raw/19b8748f0c1389c116dd2be760263f6d4b972e93/gistfile1.sh'),
 (99, 'OSX Fresh Install', NULL, NULL, '2016-03-23 17:56:44', '2016-03-23 17:56:44', NULL, 'https://gist.githubusercontent.com/moul/2491365/raw/34e181abd7a5a0b2c8a008f95c6cd22028096a20/100%20-%20OSX%20Desktop.markdown'),
-(100, 'Personalized Web Options', NULL, NULL, '2016-03-23 17:56:44', '2016-03-23 17:56:44', NULL, 'https://gist.githubusercontent.com/moul/2216629/raw/4dc57fc1a901665971ea797eb203e223f86e0765/cdiscount.com');
+(100, 'Personalized Web Options', NULL, NULL, '2016-03-23 17:56:44', '2016-03-23 17:56:44', NULL, 'https://gist.githubusercontent.com/moul/2216629/raw/4dc57fc1a901665971ea797eb203e223f86e0765/cdiscount.com'),
+(101, 'Gists_manager Import', NULL, NULL, '2016-03-23 18:24:46', '2016-03-23 18:24:46', NULL, 'https://gist.githubusercontent.com/Rx10110/ae29b90f09dc480f4813/raw/fba7da5ac9da87bdb8248751e160b58fb67996e9/import.rb');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schema_migrations`
+--
+
+CREATE TABLE IF NOT EXISTS `schema_migrations` (
+  `version` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  UNIQUE KEY `unique_schema_migrations` (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `schema_migrations`
+--
+
+INSERT INTO `schema_migrations` (`version`) VALUES
+('20160322153522'),
+('20160322154454'),
+('20160322161253'),
+('20160322162438'),
+('20160322172512'),
+('20160322173427'),
+('20160322194527');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
