@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Description</th>
-      <th>User</th>
+      <th>ID</th>
       <th>Category</th>
       <th>Url</th>
       <th colspan="3"></th>
@@ -17,6 +17,7 @@
     <% @gists.each do |gist| %>
       <tr>
         <td><%= gist.description %></td>
+        <td><%= gist.id %></td>
         <td><%= gist.user_id %></td>
         <td><%= gist.category_id %></td>
         <td><%= gist.url %></td>
