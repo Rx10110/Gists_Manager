@@ -1,3 +1,7 @@
-Url heroku pour test :
+Enter the name of a user to access and save his public gists.
+
+You can then create categories to order them.
+
+Heroku link :
 
 https://gistsmanager.herokuapp.com/
