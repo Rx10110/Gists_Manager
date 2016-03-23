@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   resources :categories do
       resources :gists
   end
-  get 'gists/import_form' => 'gists#import_form'
-  post 'gists/import' => 'gists#import'
+  get 'gists/import_form' => 'gists#import_form', as: "import_form"
+  post 'gists/import' => 'gists#import', as: "import"
   resources :gists
 
 
