@@ -1,0 +1,7 @@
+<%= form_tag "import" do %>
+<%= label_tag(:username, "Search for:") %>
+<%= text_field_tag(:username) %>
+<%= submit_tag("Import") %>
+<% end %>
+
+</br> <%= link_to 'Gists index', gists_path %>
